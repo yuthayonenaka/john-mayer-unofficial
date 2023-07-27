@@ -1,0 +1,150 @@
+@use "../abstracts/variables";
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: variables.$color-primary;
+}
+
+.heading {
+  &__primary {
+    position: relative;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 5.6rem;
+    z-index: 10;
+    margin-top: 14.4rem;
+
+    @media only screen and (max-width: 553px) {
+      margin-top: 13.6rem;
+      width: 80vw;
+      gap: 4rem;
+    }
+
+    &--main {
+      font-size: 14.4rem;
+      line-height: 1;
+
+      @media only screen and (max-width: 768px) {
+        font-size: 10.4rem;
+      }
+
+      @media only screen and (max-width: 553px) {
+        font-size: 9.6rem;
+      }
+    }
+
+    &--sub {
+      width: 60rem;
+      font-size: 2.4rem;
+      font-weight: 300;
+      opacity: 90%;
+      letter-spacing: 0.1px;
+      @media only screen and (max-width: 768px) {
+        font-size: 2rem;
+        width: 60rem;
+      }
+      @media only screen and (max-width: 553px) {
+        width: 50rem;
+        font-size: 1.8rem;
+      }
+      @media only screen and (max-width: 458px) {
+        width: 40rem;
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  &__secondary {
+    font-size: 9rem;
+    position: relative;
+    z-index: 10;
+
+    @media only screen and (max-width: 768px) {
+      font-size: 8rem;
+    }
+    @media only screen and (max-width: 553px) {
+      font-size: 6.4rem;
+    }
+    @media only screen and (max-width: 458px) {
+      font-size: 5.6rem;
+    }
+
+    &--slate {
+      color: variables.$color-secondary-900;
+    }
+    &--slate-light {
+      color: variables.$color-secondary-200;
+    }
+  }
+
+  &__tertiary {
+    font-size: 2rem;
+    font-weight: 500;
+
+    @media only screen and (max-width: 768px) {
+      font-size: 1.6rem;
+    }
+    &--slate {
+      color: variables.$color-secondary-950;
+    }
+  }
+}
+
+.tour-dates {
+  &__date,
+  &__location,
+  &__type {
+    font-size: 1.6rem;
+    font-weight: 500;
+  }
+
+  &__date {
+    color: variables.$color-secondary-950;
+  }
+  &__location {
+    color: variables.$color-secondary-800;
+  }
+  &__type {
+    color: variables.$color-secondary-600;
+    font-weight: 600;
+  }
+}
+
+.discography {
+  &__title {
+    position: absolute;
+    bottom: -10%;
+    font-size: 2.4rem;
+    color: variables.$color-secondary-950;
+    background-color: black;
+    z-index: 10000;
+  }
+}
+
+.newsletter {
+  &__heading {
+    font-size: 7.2rem;
+    color: variables.$color-secondary-200;
+    @media only screen and (max-width: 768px) {
+      font-size: 5.6rem;
+    }
+    @media only screen and (max-width: 553px) {
+      font-size: 3.2rem;
+    }
+  }
+}
+
+.footer {
+  z-index: 10;
+  text-align: center;
+  font-size: 1.6rem;
+  color: variables.$color-secondary-100;
+  font-weight: 300;
+  opacity: 90%;
+  letter-spacing: 1px;
+}

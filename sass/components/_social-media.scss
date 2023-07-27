@@ -1,0 +1,43 @@
+@use "../abstracts/variables";
+
+.social-media {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    left: 0;
+    position: fixed;
+    bottom: 10%;
+    z-index: 50;
+    gap: 1.6rem;
+    background-image: linear-gradient(
+      to top,
+      rgba(variables.$color-secondary-800, 0.8),
+      rgba(variables.$color-secondary-500, 0.8)
+    );
+    backdrop-filter: blur(10px);
+    border-radius: 0 8px 8px 0;
+
+    @media only screen and (max-width: 768px) {
+      position: absolute;
+      flex-direction: row;
+      bottom: -3%;
+      left: 50%;
+      translate: -50% -50%;
+      background-image: none;
+      backdrop-filter: blur(5px);
+      border-radius: 8px;
+      gap: 3.2rem;
+    }
+  }
+  &__icons {
+    display: block;
+    cursor: pointer;
+  }
+  &__icon {
+    width: 5.6rem;
+    @media only screen and (max-width: 768px) {
+      width: 6.4rem;
+    }
+  }
+}

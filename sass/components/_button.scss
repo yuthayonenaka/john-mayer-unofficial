@@ -1,0 +1,40 @@
+@use "../abstracts/variables";
+
+.btn {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.6rem;
+  }
+
+  &__vip:link,
+  &__vip:visited,
+  &__tickets:link,
+  &__tickets:visited {
+    display: block;
+    background-color: variables.$color-secondary-900;
+    text-decoration: none;
+    color: variables.$color-primary-light;
+    border-radius: 4px;
+    font-size: 1.6rem;
+    transition: all 0.3s;
+  }
+
+  &__vip:hover,
+  &__vip:active,
+  &__tickets:hover,
+  &__tickets:active {
+    background-color: variables.$color-secondary-800;
+  }
+
+  &__vip {
+    padding: 1.6rem 6.4rem;
+    box-shadow: 0 0 0 4px #fff;
+  }
+
+  &__tickets {
+    padding: 1.6rem 7.2rem;
+  }
+}

@@ -1,0 +1,25 @@
+.discography {
+  &__container {
+    @media only screen and (max-width: 828px) {
+      position: relative;
+      align-self: flex-start;
+      overflow-x: scroll;
+      scroll-snap-type: mandatory;
+      width: 100%;
+    }
+  }
+  &__list {
+    display: grid;
+    position: relative;
+    width: 80vw;
+    justify-content: center;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(39rem, 1fr));
+    gap: 4.8rem;
+    z-index: 10;
+    @media only screen and (max-width: 828px) {
+      width: fit-content;
+      display: flex;
+    }
+  }
+}

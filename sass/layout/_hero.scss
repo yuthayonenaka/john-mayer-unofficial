@@ -1,0 +1,26 @@
+@use "../abstracts/variables";
+@use "../base/typhography";
+
+.hero__img {
+  & > * {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+  }
+  &--1 {
+    width: clamp(50rem, 50vw, 80rem);
+    left: -10%;
+    @media only screen and (max-width: 768px) {
+      left: 50%;
+      transform: translate(-50%);
+    }
+  }
+  &--2 {
+    width: clamp(65rem, 60vw, 95rem);
+    right: -14%;
+    mix-blend-mode: screen;
+    @media only screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+}
